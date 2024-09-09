@@ -43,8 +43,8 @@
 |1| 기반 언어모델 : roberta | <img width="1200" src="https://github.com/user-attachments/assets/8d56a8d6-8e8e-48b1-9f0d-8e56767b4778"> | 뛰어난 성능지표를 보이는 언어모델 roberta의 large버전과 small버전을 모두 이용했다.|
 |2| simCSE 지도학습으로 직무분야 학습 | <img width="1200" src="https://github.com/user-attachments/assets/02133c54-cac0-4e95-9dea-45c1b11f994c"> | 채용공고와 합격자소서 크롤링 데이터의 문장마다 dropout으로 서로다른 임베딩쌍을 생성하여 학습한다. <br> 같은 문장에서 유래한 두 임베딩은 가까워지도록 학습하고 다른문장의 임베딩들은 멀어지도록 학습한다. |
 |3| simCSE 비지도학습으로 채용공고 매칭학습 | <img width="1200" src="https://github.com/user-attachments/assets/d66c0e06-1fad-4993-8850-29fe8396a08d"> | 채용공고와 이에 합격한 자소서의 문장들은 encoder를 거쳐 임베딩쌍으로 변환된다.<br> 이후 긍정인스턴스와 부정인스턴스로 구분하여 학습하며 유사도기반 매칭을 강화한다 |
-|4| 문장유사도기반 매칭 알고리즘 | <img width="1200" src="https://github.com/user-attachments/assets/de8abf5e-0535-48da-b71b-cded2285e121"> | 사용자가 입력한 자소서의 문장과 채용공고 문장들을 모두 일대일로 비교하여 가장높은 유사도값(max)을 구한다.<br> 이것을 평균내어 최종 매칭점수를 계산하게 된다. |
-||| <img width="1200" src="https://github.com/user-attachments/assets/077e0672-e15d-43ef-8e8c-d7e4e1e00918"> ||
+|4| 문장유사도기반 매칭 알고리즘 | <img width="1200" src="https://github.com/user-attachments/assets/de8abf5e-0535-48da-b71b-cded2285e121"> | 사용자가 입력한 자소서의 문장과 채용공고 문장들을 모두 일대일로 비교하여 가장높은 유사도값(max)을 구한다. |
+||| <img width="1200" src="https://github.com/user-attachments/assets/077e0672-e15d-43ef-8e8c-d7e4e1e00918"> | max유사도 값들을 평균내어 최종매칭점수를 도출한다. |
 |5| 매칭알고리즘 강화 | <img width="1200" src="https://github.com/user-attachments/assets/a7ff76f1-245e-4c18-afd4-8555fc5081e1"> | 기존의 문장별 일대일 학습에서 매칭 정확도는 높았지만 소요시간이 커졌다. <br> 이에 따라 주요업무 우대사항관련 문장, 단어들로 1차 매칭을 거치는 강화 알고리즘을 개발하였다. |
 ||| <img width="1200" src="https://github.com/user-attachments/assets/a722fff2-65e1-4a92-a663-d790d12fa695"> | 이에 따라 1건당 매칭시간은 대폭 감소시키면서 정확도는 유지할 수 있었다 |
 |6| 동작방식| <img width="1200" src="https://github.com/user-attachments/assets/6b1549d9-8566-40cb-aa2c-396e95016f94"> | 분석시그널을 이용해 AI를 구동한다. <br> 사용자의 자소서가 등록, 변경되는 경우나 새로운 크롤링 데이터가 유입되는 경우 분석시그널이 작동한다. |
