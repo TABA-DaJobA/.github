@@ -36,11 +36,9 @@
 <img width="880" src="https://github.com/user-attachments/assets/87b2ab6c-4657-437d-9f9b-bb481e20b6b1">
 
 ## ✔️ AI 모델 구축과정
-<div align="center">
 <img width="600" src="https://github.com/user-attachments/assets/07800a24-673e-4ea0-b425-9c7d9b1ce112">
-</div>
 
-|번호|제목|내용|이미지|
+|단계|내용|이미지|상세설명|
 |:-:|:-:|:-:|:-:|
 |1| 기반 언어모델 : roberta | <img width="1200" src="https://github.com/user-attachments/assets/8d56a8d6-8e8e-48b1-9f0d-8e56767b4778"> | 뛰어난 성능지표를 보이는 언어모델 roberta의 large버전과 small버전을 모두 이용했다.|
 |2| simCSE 지도학습으로 직무분야 학습 | <img width="1200" src="https://github.com/user-attachments/assets/02133c54-cac0-4e95-9dea-45c1b11f994c"> | 채용공고와 합격자소서 크롤링 데이터의 문장마다 dropout으로 서로다른 임베딩쌍을 생성하여 학습한다. <br> 같은 문장에서 유래한 두 임베딩은 가까워지도록 학습하고 다른문장의 임베딩들은 멀어지도록 학습한다. |
